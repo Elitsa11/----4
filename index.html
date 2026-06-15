@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HERO SYSTEM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hero-panel">
+    <h1>HERO SYSTEM</h1>
+
+    <div class="energy-panel">
+      <div class="energy-label">ENERGY</div>
+      <div class="energy-meter">
+        <div id="energyBar" class="energy-bar"></div>
+      </div>
+      <div id="energyValue" class="energy-value">100 / 100</div>
+    </div>
+
+    <div class="abilities">
+      <button id="shieldBtn" class="ability-btn" data-cost="15">Shield Bash<br><span>cost 15</span></button>
+      <button id="strikeBtn" class="ability-btn" data-cost="30">Power Strike<br><span>cost 30</span></button>
+      <button id="surgeBtn" class="ability-btn" data-cost="40">Energy Surge<br><span>restore 40</span></button>
+    </div>
+
+    <div id="statusText" class="status-text">Избери способност и я активирай.</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
