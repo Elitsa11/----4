@@ -38,6 +38,18 @@ body {
   box-shadow: 0 20px 70px rgba(14, 165, 233, 0.35);
 }
 
+.hero-panel.frost {
+  background: linear-gradient(135deg, #164e63, #06b6d4);
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 20px 70px rgba(34, 211, 238, 0.35);
+}
+
+.hero-panel.meteor {
+  background: linear-gradient(135deg, #713f12, #ea580c);
+  border-color: rgba(253, 168, 45, 0.45);
+  box-shadow: 0 20px 70px rgba(234, 88, 12, 0.35);
+}
+
 .hero-panel h1 {
   margin: 0 0 16px;
   font-size: 2.1rem;
@@ -90,7 +102,7 @@ body {
 .abilities {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   margin-bottom: 20px;
 }
 

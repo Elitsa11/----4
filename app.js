@@ -72,15 +72,23 @@ function power(ability) {
 }
 
 document.getElementById("shieldBtn").addEventListener("click", () => {
-  power({ name: "Shield Bash", cost: 15, color: "shield" });
+  power({ name: "Shield Bash", cost: 20, color: "shield" });
 });
 
 document.getElementById("strikeBtn").addEventListener("click", () => {
-  power({ name: "Power Strike", cost: 30, color: "strike" });
+  power({ name: "Power Strike", cost: 35, color: "strike" });
 });
 
 document.getElementById("surgeBtn").addEventListener("click", () => {
-  power({ name: "Energy Surge", cost: 40, color: "surge", effect: "restore" });
+  power({ name: "Energy Surge", cost: 50, color: "surge", effect: "restore" });
+});
+
+document.getElementById("frostBtn").addEventListener("click", () => {
+  power({ name: "Frost Wall", cost: 25, color: "frost" });
+});
+
+document.getElementById("meteorBtn").addEventListener("click", () => {
+  power({ name: "Meteor Strike", cost: 45, color: "meteor" });
 });
 
 updateEnergy();
