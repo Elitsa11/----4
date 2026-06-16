@@ -16,12 +16,17 @@ function updateEnergy() {
   energyBar.style.width = `${percent}%`;
   energyValue.textContent = `${energy} / ${maxEnergy}`;
 
+  if (energy === 0) {
+    statusText.textContent = "Енергията е 0. Не може да се използва способност.";
+    heroPanel.classList.remove("shield", "strike", "surge");
+  }
+
   document.querySelectorAll(".ability-btn").forEach((button) => {
     const cost = Number(button.dataset.cost) || 0;
     if (button.id === "surgeBtn") {
-      button.disabled = energy >= maxEnergy;
+      button.disabled = energy >= maxEnergy || energy === 0;
     } else {
-      button.disabled = energy < cost;
+      button.disabled = energy < cost || energy === 0;
     }
   });
 }
@@ -35,6 +40,11 @@ function setActiveAbility(name, styleClass) {
 }
 
 function useAbility(name, cost, effect, styleClass) {
+  if (energy === 0) {
+    statusText.textContent = `Не може да се използва ${name}. Енергията е 0.`;
+    return;
+  }
+
   if (cost > 0 && energy < cost) {
     statusText.textContent = `Недостатъчно енергия за ${name}.`;
     return;
