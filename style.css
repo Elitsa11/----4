@@ -67,7 +67,49 @@ body {
 .energy-panel {
   display: grid;
   gap: 10px;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
+}
+
+.boss-panel {
+  margin-bottom: 18px;
+  padding: 18px 18px 16px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.boss-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.boss-name {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f8fafc;
+}
+
+.boss-value {
+  font-size: 0.95rem;
+  color: #fce7f3;
+}
+
+.boss-meter {
+  width: 100%;
+  height: 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.boss-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f472b6, #ec4899);
+  transition: width 0.25s ease;
 }
 
 .energy-label {
