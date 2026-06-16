@@ -42,13 +42,17 @@ function setActiveAbility(name, styleClass) {
 function useAbility(name, cost, effect, styleClass) {
   if (energy === 0) {
     statusText.textContent = `Не може да се използва ${name}. Енергията е 0.`;
+    statusText.classList.add("warning");
     return;
   }
 
-  if (cost > 0 && energy < cost) {
+  if (energy < cost) {
     statusText.textContent = `Недостатъчно енергия за ${name}.`;
+    statusText.classList.add("warning");
     return;
   }
+
+  statusText.classList.remove("warning");
 
   if (effect === "restore") {
     energy = clamp(energy + cost, 0, maxEnergy);

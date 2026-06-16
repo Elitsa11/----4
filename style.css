@@ -135,6 +135,12 @@ body {
   backdrop-filter: blur(8px);
 }
 
+.status-text.warning {
+  background: rgba(248, 113, 113, 0.16);
+  border-color: rgba(248, 113, 113, 0.35);
+  color: #fee2e2;
+}
+
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
