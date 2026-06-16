@@ -1,4 +1,4 @@
-﻿const maxEnergy = 100;
+﻿const maxEnergy = 120;
 let energy = maxEnergy;
 
 const energyBar = document.getElementById("energyBar");
