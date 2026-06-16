@@ -52,16 +52,20 @@ function useAbility(name, cost, effect, styleClass) {
   updateEnergy();
 }
 
+function power(name, cost, color, effect = null) {
+  useAbility(name, cost, effect, color);
+}
+
 document.getElementById("shieldBtn").addEventListener("click", () => {
-  useAbility("Shield Bash", 15, null, "shield");
+  power("Shield Bash", 15, "shield");
 });
 
 document.getElementById("strikeBtn").addEventListener("click", () => {
-  useAbility("Power Strike", 30, null, "strike");
+  power("Power Strike", 30, "strike");
 });
 
 document.getElementById("surgeBtn").addEventListener("click", () => {
-  useAbility("Energy Surge", 40, "restore", "surge");
+  power("Energy Surge", 40, "surge", "restore");
 });
 
 updateEnergy();
